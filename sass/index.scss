@@ -1,3 +1,120 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *,
+  *:before,
+  *:after {
+    box-sizing: inherit;
+  }
+
 .Main {
     text-align: center;
+
+    &-header {
+
+        &-logo {}
+        &-navigation{
+
+            &-item {}
+        }
+    }
+}
+
+.container {
+    max-width: 1140px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.grid {
+    position: relative;
+    max-width: 1216px;
+
+    &-row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &-blank {
+        &--1 {
+            margin-left: calc(100%/12);
+        }
+        &--2 {
+            margin-left: calc(100%/12*2);
+        }
+        &--3 {
+            margin-left: calc(100%/12*3);
+        }
+        &--4 {
+            margin-left: calc(100%/12*4);
+        }
+        &--5 {
+            margin-left: calc(100%/12*5);
+        }
+        &--6 {
+            margin-left: calc(100%/12*6);
+        }
+        &--7 {
+            margin-left: calc(100%/12*7);
+        }
+        &--8 {
+            margin-left: calc(100%/12*8);
+        }
+        &--9 {
+            margin-left: calc(100%/12*9);
+        }
+        &--10 {
+            margin-left: calc(100%/12*10);
+        }
+        &--11 {
+            margin-left: calc(100%/12*11);
+        }
+    }
+
+    &-item {
+        background-color: bisque;
+        margin-right: calc(100%/38);
+
+        &--1 {
+            width: calc(100%/12 - 100%/38);
+        }
+        &--2 {
+            width: calc(100%/12*2 - 100%/38);
+        }
+        &--3 {
+            width: calc(100%/12*3 - 100%/38);
+        }
+        &--4 {
+            width: calc(100%/12*4 - 100%/38);
+        }
+        &--5 {
+            width: calc(100%/12*5 - 100%/38);
+        }
+        &--6 {
+            width: calc(100%/12*6 - 100%/38);
+        }
+        &--7 {
+            width: calc(100%/12*7 - 100%/38);
+        }
+        &--8 {
+            width: calc(100%/12*8 - 100%/38);
+        }
+        &--9 {
+            width: calc(100%/12*9 - 100%/38);
+        }
+        &--10 {
+            width: calc(100%/12*10 - 100%/38);
+        }
+        &--11 {
+            width: calc(100%/12*11 - 100%/38);
+        }
+        &--12 {
+            width: 100%;
+        }
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 }
