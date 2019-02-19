@@ -1,5 +1,6 @@
 html {
     box-sizing: border-box;
+    font-family: Lato;
   }
   
   *,
@@ -10,13 +11,45 @@ html {
 
 .Main {
     text-align: center;
+    background-color: #e6ecf2;
 
     &-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
 
-        &-logo {}
+        &-logo {
+            
+        }
         &-navigation{
+            display: flex;
+            justify-content: flex-end;
 
-            &-item {}
+            &-item {
+                font-size: 12px;
+                font-weight: 900;
+                letter-spacing: 0.3px;
+                color: #374656;
+                padding-left: 36px;
+            }
+        }
+    }
+
+    &-info {
+        text-align: center;
+        padding: 200px 0 80px;
+        color: #374656;
+
+        &-title{
+            font-size: 35px;
+            font-weight: bold;
+            line-height: 1.37;
+            letter-spacing: 0.8px;
+        }
+
+        &-text{
+            font-size: 16px;
+            letter-spacing: 0.4px;
         }
     }
 }
@@ -26,19 +59,29 @@ html {
 
     ul {
         list-style-type: none;
+        padding: 0;
+        margin: 0;
 
         li {
             font-size: 16px;
             line-height: 2;
             color: #374656;
-            padding: 0 16px;
+            padding: 24px 16px 0;
 
             &:first-child{
-                text-align: center;
+                padding-bottom: 16px;
                 font-size: 22px;
                 font-weight: bold;
                 line-height: 1.45;
                 color: #374656;
+            }
+
+            &:nth-child(2) {
+                padding-top: 0;
+            }
+
+            &:last-child {
+                padding-bottom: 24px;
             }
         }
     }
@@ -50,13 +93,14 @@ html {
         letter-spacing: 0.8px;
         text-align: center;
         color: #374656;
+        padding: 96px 0 80px;
     }
 
     &-text {
         font-size: 16px;
         line-height: 2;
         color: #374656;
-        padding: 0 16px;
+        padding: 8px 16px;
     }
 
     &--italic {
@@ -68,6 +112,7 @@ html {
     &-bg {
         border-radius: 8px;
         background-color: #e6ecf2;
+        margin: 0;
     }
 
     &-point {
@@ -83,6 +128,10 @@ html {
     max-width: 1140px;
     margin-right: auto;
     margin-left: auto;
+
+    &--small {
+        max-width: 832px;
+    }
 }
 
 

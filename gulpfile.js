@@ -2,14 +2,12 @@
  
 var gulp = require('gulp');
 var sass = require('gulp-sass');
-var validator = require('gulp-html');
 
  
 sass.compiler = require('node-sass');
  
 gulp.task('html', function() {
     return gulp.src('src/index.html')
-    .pipe(validator())
     .pipe(gulp.dest('dist/'));
 });
 
