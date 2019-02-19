@@ -9,6 +9,47 @@ html {
 .Main {
   text-align: center; }
 
+.Body {
+  font-family: Lato; }
+  .Body ul {
+    list-style-type: none; }
+    .Body ul li {
+      font-size: 16px;
+      line-height: 2;
+      color: #374656;
+      padding: 0 16px; }
+      .Body ul li:first-child {
+        text-align: center;
+        font-size: 22px;
+        font-weight: bold;
+        line-height: 1.45;
+        color: #374656; }
+  .Body-title {
+    font-size: 35px;
+    font-weight: bold;
+    line-height: 1.37;
+    letter-spacing: 0.8px;
+    text-align: center;
+    color: #374656; }
+  .Body-text {
+    font-size: 16px;
+    line-height: 2;
+    color: #374656;
+    padding: 0 16px; }
+  .Body--italic {
+    font-style: italic;
+    font-stretch: normal;
+    color: #788392; }
+  .Body-bg {
+    border-radius: 8px;
+    background-color: #e6ecf2; }
+  .Body-point {
+    font-size: 22px;
+    font-weight: bold;
+    line-height: 1.45;
+    text-align: left;
+    color: #374656; }
+
 .container {
   max-width: 1140px;
   margin-right: auto;
