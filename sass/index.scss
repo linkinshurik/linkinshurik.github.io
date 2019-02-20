@@ -34,7 +34,17 @@ html {
                 font-weight: 900;
                 letter-spacing: 0.3px;
                 color: #374656;
-                padding-left: 36px;
+                margin: 8px;
+                padding: 8px;
+                border: 1px solid transparent;
+                cursor: pointer;
+
+                &:hover {
+                    border-color:#374656;
+                    border-radius: 8px;
+                }
+
+                
             }
         }
     }
@@ -180,10 +190,71 @@ html {
         }
     }
     &-links {
-        
+        display: flex;
+        justify-content: space-between;
+        padding: 50px 0;
+
+        &-phone {
+            display: flex;
+            width: 200px;
+
+            &-icon {
+                margin-right: 16px;
+                display: flex;
+            }
+            &-title {
+                margin: 0;
+                font-size: 22px;
+                font-weight: 900;
+                line-height: 1.09;
+                color: #374656;
+                text-align: left;
+            }
+
+            &-sub{
+                margin: 0;
+                text-decoration: underline;
+                font-size: 14px;
+                line-height: 1.21;
+                color: #0a994a;
+                text-align: left;
+            }
+
+        }
+        &-social {
+            display: flex;
+            &-icon {
+                margin: 0 8px;
+                height: 40px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 40px;
+
+                &--blue {
+                    background-color: #3b5998;
+                }
+                &--red {
+                    background-color: #ff0002;
+                }
+                &--purple {
+                    background-color: #5851db;
+                }
+            }
+        }
+        &-cards {
+            display: flex;
+            width: 200px;
+            justify-content: flex-end;
+
+            &-icon {
+                margin: 0 8px;
+            }
+        }
     }
     &-platform {
-
+        padding: 0 0 40px;
     }
 }
 

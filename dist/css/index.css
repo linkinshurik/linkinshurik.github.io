@@ -26,7 +26,13 @@ html {
         font-weight: 900;
         letter-spacing: 0.3px;
         color: #374656;
-        padding-left: 36px; }
+        margin: 8px;
+        padding: 8px;
+        border: 1px solid transparent;
+        cursor: pointer; }
+        .Main-header-navigation-item:hover {
+          border-color: #374656;
+          border-radius: 8px; }
   .Main-info {
     text-align: center;
     padding: 200px 0 80px;
@@ -123,6 +129,54 @@ html {
           font-weight: 900;
           color: #374656;
           padding-bottom: 24px; }
+  .Footer-links {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0; }
+    .Footer-links-phone {
+      display: flex;
+      width: 200px; }
+      .Footer-links-phone-icon {
+        margin-right: 16px;
+        display: flex; }
+      .Footer-links-phone-title {
+        margin: 0;
+        font-size: 22px;
+        font-weight: 900;
+        line-height: 1.09;
+        color: #374656;
+        text-align: left; }
+      .Footer-links-phone-sub {
+        margin: 0;
+        text-decoration: underline;
+        font-size: 14px;
+        line-height: 1.21;
+        color: #0a994a;
+        text-align: left; }
+    .Footer-links-social {
+      display: flex; }
+      .Footer-links-social-icon {
+        margin: 0 8px;
+        height: 40px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px; }
+        .Footer-links-social-icon--blue {
+          background-color: #3b5998; }
+        .Footer-links-social-icon--red {
+          background-color: #ff0002; }
+        .Footer-links-social-icon--purple {
+          background-color: #5851db; }
+    .Footer-links-cards {
+      display: flex;
+      width: 200px;
+      justify-content: flex-end; }
+      .Footer-links-cards-icon {
+        margin: 0 8px; }
+  .Footer-platform {
+    padding: 0 0 40px; }
 
 .container {
   max-width: 1140px;
