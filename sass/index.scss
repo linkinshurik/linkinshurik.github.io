@@ -23,8 +23,9 @@ html {
         padding-top: 72px;
 
         &-logo {
-            
+            padding-left: 16px;
         }
+
         &-navigation{
             display: flex;
             justify-content: flex-end;
@@ -38,13 +39,19 @@ html {
                 padding: 8px;
                 border: 1px solid transparent;
                 cursor: pointer;
+                text-transform: uppercase;
+                transition: all .3s;
+                border-radius: 8px;
 
                 &:hover {
                     border-color:#374656;
-                    border-radius: 8px;
                 }
 
-                
+                &--lang {
+                    &:hover {
+                        border-color: transparent;
+                    }
+                }
             }
         }
     }
@@ -75,6 +82,17 @@ html {
             border-radius: 8px;
             box-shadow: 0 4px 16px 0 rgba(29, 107, 178, 0.05);
             background-color: #ffffff;
+            outline: none;
+            
+            font-size: 16px;
+            line-height: 3;
+            letter-spacing: 0.4px;
+            color: #374656;
+            text-indent: 16px;
+
+            @media (max-width: 640px) {
+                width: calc(100% - 32px);
+            }
 
             &-wrap {
 
@@ -86,6 +104,7 @@ html {
 .Body {
     font-family: Lato;
     background-color: #f1f5f8;
+    padding-bottom: 32px;
 
     ul {
         list-style-type: none;
@@ -164,6 +183,11 @@ html {
     &-navigation {
         display: flex;
         justify-content: center;
+
+        @media (max-width: 640px) {
+            flex-direction: column;
+            align-items: center;
+        }
         
         ul {
             list-style: none;
@@ -193,6 +217,19 @@ html {
         display: flex;
         justify-content: space-between;
         padding: 50px 0;
+
+        @media (max-width: 640px) {
+            flex-direction: column;
+            align-items: center;
+
+            & > * {
+                padding-bottom: 24px;
+
+                &:last-child {
+                    padding-bottom: 0;
+                }
+            }
+        }
 
         &-phone {
             display: flex;
@@ -248,6 +285,10 @@ html {
             width: 200px;
             justify-content: flex-end;
 
+            @media (max-width: 640px) {
+                justify-content: space-around;
+            }
+
             &-icon {
                 margin: 0 8px;
             }
@@ -266,4 +307,66 @@ html {
     &--small {
         max-width: 832px;
     }
+}
+
+.language-swith {
+    display: inline-block;
+    margin: 0;
+    padding-left: 0;
+    font-size: 0;
+
+    li{
+        color: #fff;
+        display: inline-block;
+        position: relative;
+    }
+
+    li input[type=radio]{
+        position: absolute;
+        visibility: hidden;
+    }
+
+    li label{
+        display: block;
+        position: relative;
+        font-weight: 900;
+        font-size: 12px;
+        padding: 0 12px;
+        z-index: 9;
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: all 0.25s linear;
+    }
+
+    li .check{
+        display: block;
+        position: absolute;
+        border: 1px solid #374656;
+        background-color: #374656;
+        height: 36px;
+        width: 100%;
+        top: -10px;
+        left: 0;
+        z-index: 5;
+        box-sizing: border-box;
+        transition: border .25s linear;
+    }
+
+    & > li:first-of-type > .check{
+        border-radius: 8px 0 0 8px;
+    }
+
+    & > li:last-of-type > .check{
+        border-radius: 0 8px 8px 0;
+    }
+
+    input[type=radio]:checked ~ .check {
+        background-color: #fff;
+        border-color: #374656;
+    }
+    
+    input[type=radio]:checked ~ label{
+        color: #374656;
+    }
+
 }

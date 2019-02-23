@@ -18,6 +18,8 @@ html {
     justify-content: space-between;
     align-items: center;
     padding-top: 72px; }
+    .Main-header-logo {
+      padding-left: 16px; }
     .Main-header-navigation {
       display: flex;
       justify-content: flex-end; }
@@ -29,10 +31,14 @@ html {
         margin: 8px;
         padding: 8px;
         border: 1px solid transparent;
-        cursor: pointer; }
+        cursor: pointer;
+        text-transform: uppercase;
+        transition: all .3s;
+        border-radius: 8px; }
         .Main-header-navigation-item:hover {
-          border-color: #374656;
-          border-radius: 8px; }
+          border-color: #374656; }
+        .Main-header-navigation-item--lang:hover {
+          border-color: transparent; }
   .Main-info {
     text-align: center;
     padding: 200px 0 80px;
@@ -53,11 +59,21 @@ html {
       height: 48px;
       border-radius: 8px;
       box-shadow: 0 4px 16px 0 rgba(29, 107, 178, 0.05);
-      background-color: #ffffff; }
+      background-color: #ffffff;
+      outline: none;
+      font-size: 16px;
+      line-height: 3;
+      letter-spacing: 0.4px;
+      color: #374656;
+      text-indent: 16px; }
+      @media (max-width: 640px) {
+        .Main-info-select {
+          width: calc(100% - 32px); } }
 
 .Body {
   font-family: Lato;
-  background-color: #f1f5f8; }
+  background-color: #f1f5f8;
+  padding-bottom: 32px; }
   .Body ul {
     list-style-type: none;
     padding: 0;
@@ -113,6 +129,10 @@ html {
   .Footer-navigation {
     display: flex;
     justify-content: center; }
+    @media (max-width: 640px) {
+      .Footer-navigation {
+        flex-direction: column;
+        align-items: center; } }
     .Footer-navigation ul {
       list-style: none;
       margin: 0;
@@ -133,6 +153,14 @@ html {
     display: flex;
     justify-content: space-between;
     padding: 50px 0; }
+    @media (max-width: 640px) {
+      .Footer-links {
+        flex-direction: column;
+        align-items: center; }
+        .Footer-links > * {
+          padding-bottom: 24px; }
+          .Footer-links > *:last-child {
+            padding-bottom: 0; } }
     .Footer-links-phone {
       display: flex;
       width: 200px; }
@@ -173,6 +201,9 @@ html {
       display: flex;
       width: 200px;
       justify-content: flex-end; }
+      @media (max-width: 640px) {
+        .Footer-links-cards {
+          justify-content: space-around; } }
       .Footer-links-cards-icon {
         margin: 0 8px; }
   .Footer-platform {
@@ -184,3 +215,47 @@ html {
   margin-left: auto; }
   .container--small {
     max-width: 832px; }
+
+.language-swith {
+  display: inline-block;
+  margin: 0;
+  padding-left: 0;
+  font-size: 0; }
+  .language-swith li {
+    color: #fff;
+    display: inline-block;
+    position: relative; }
+  .language-swith li input[type=radio] {
+    position: absolute;
+    visibility: hidden; }
+  .language-swith li label {
+    display: block;
+    position: relative;
+    font-weight: 900;
+    font-size: 12px;
+    padding: 0 12px;
+    z-index: 9;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: all 0.25s linear; }
+  .language-swith li .check {
+    display: block;
+    position: absolute;
+    border: 1px solid #374656;
+    background-color: #374656;
+    height: 36px;
+    width: 100%;
+    top: -10px;
+    left: 0;
+    z-index: 5;
+    box-sizing: border-box;
+    transition: border .25s linear; }
+  .language-swith > li:first-of-type > .check {
+    border-radius: 8px 0 0 8px; }
+  .language-swith > li:last-of-type > .check {
+    border-radius: 0 8px 8px 0; }
+  .language-swith input[type=radio]:checked ~ .check {
+    background-color: #fff;
+    border-color: #374656; }
+  .language-swith input[type=radio]:checked ~ label {
+    color: #374656; }
