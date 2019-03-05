@@ -106,6 +106,7 @@ html {
     font-size: 16px;
     line-height: 2;
     color: #374656;
+    display: block;
     padding: 8px 16px; }
   .Body--italic {
     font-style: italic;
