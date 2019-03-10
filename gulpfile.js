@@ -8,7 +8,7 @@ sass.compiler = require('node-sass');
  
 gulp.task('html', function() {
     return gulp.src('src/index.html')
-    .pipe(gulp.dest('dist/'));
+    .pipe(gulp.dest('./dist/'));
 });
 
 gulp.task('sass', function () {
