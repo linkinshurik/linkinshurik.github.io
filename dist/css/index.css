@@ -49,6 +49,9 @@ body {
     text-align: center;
     padding: 200px 0 80px;
     color: #374656; }
+    @media (max-width: 640px) {
+      .Main-info {
+        padding: 200px 20px 80px; } }
     .Main-info-title {
       font-size: 35px;
       font-weight: bold;
@@ -109,6 +112,10 @@ body {
     color: #374656;
     padding: 96px 0 80px;
     overflow: hidden; }
+    @media (max-width: 640px) {
+      .Body-title {
+        font-size: 30px;
+        padding: 96px 20px 80px; } }
   .Body-text {
     font-size: 16px;
     line-height: 2;
